@@ -1,0 +1,692 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Section 1(Variables)"
+      ],
+      "metadata": {
+        "id": "SRbF0wFy4dT1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.1\n",
+        "pi = 22/7\n",
+        "print(f\" Data type: {type(pi)}\")"
+      ],
+      "metadata": {
+        "id": "15AAJ08h1qin",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "020fc6d1-ede1-4b27-e2a9-672695677440"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Data type: <class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.2\n",
+        "for = 4\n",
+        "# This raises a syntax error because for is a python reserved keyword"
+      ],
+      "metadata": {
+        "id": "k6sTdK4h1rFz"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#1.3\n",
+        "p = 5000 #principal amount\n",
+        "r = 5 # rate of interest(%)\n",
+        "t = 3 #years\n",
+        "simple_interest = (p * r * t)/100\n",
+        "print(f\"Simple Interest for 3 years = {simple_interest}\")"
+      ],
+      "metadata": {
+        "id": "OAHYxqlg1rQv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3eb538ee-dd40-4110-dc35-4b83e5bddb85"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Simple Interest for 3 years = 750.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Section 2(Numbers)"
+      ],
+      "metadata": {
+        "id": "zPtWrsrr4qHU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2.1\n",
+        "def format_number(number, representation):\n",
+        "    return format(number, representation)\n",
+        "\n",
+        "result = format_number(145, 'o')\n",
+        "print(f\"\\n2.1) format(145, 'o') = {result}\")\n",
+        "print(\"     Representation used: 'o' = OCTAL (base 8)\")\n",
+        "print(f\"     Check: 145 in base 8 -> {oct(145)}\")"
+      ],
+      "metadata": {
+        "id": "-8vjjEgS5FwW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b2c33810-58ea-4ee4-e55f-3afd087db652"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "2.1) format(145, 'o') = 221\n",
+            "     Representation used: 'o' = OCTAL (base 8)\n",
+            "     Check: 145 in base 8 -> 0o221\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2.2\n",
+        "r= 84 #radius\n",
+        "π = 3.14 #pi\n",
+        "area = π * (r ** 2)\n",
+        "print(f\"     Pond Area = {area} sq meters\")\n",
+        "\n",
+        "water_per_sq_meter = 1.4\n",
+        "total_water = area * water_per_sq_meter\n",
+        "print(f\"Total  amount of water in pond : {int(total_water)} liters\")"
+      ],
+      "metadata": {
+        "id": "dGGIeVI45VG-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ed51bd5d-8f6a-4756-9d91-5609b5042f9f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     Pond Area = 22155.84 sq meters\n",
+            "Total  amount of water in pond : 31018 liters\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 2.3\n",
+        "distance = 490   # meters\n",
+        "time_minutes = 7\n",
+        "time_seconds = time_minutes * 60\n",
+        "speed = distance / time_seconds\n",
+        "print(f\" Speed: {int(speed)} m/s\")"
+      ],
+      "metadata": {
+        "id": "0ajjX3Ob6mSC",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "288f1378-e7e8-4aaa-d7d4-472de9e51628"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Speed: 1 m/s\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Section 3(Lists)"
+      ],
+      "metadata": {
+        "id": "Zf4qZ8Pf7Nty"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "justice_league = [\"Superman\", \"Batman\", \"Wonder Woman\", \"Flash\", \"Aquaman\", \"Green Lantern\"]\n",
+        "print(f\"\\n Initial list: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "oZGkHvQD7VHo",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "38431850-51bd-46ea-958e-33dbfa37fae5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            " Initial list: ['Superman', 'Batman', 'Wonder Woman', 'Flash', 'Aquaman', 'Green Lantern']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.1\n",
+        "#Number of members in the league\n",
+        "print(f\"Number of members: {len(justice_league)}\")"
+      ],
+      "metadata": {
+        "id": "rCvyZwCq7iw_",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "822d3cd3-b5b0-43a3-bf4c-a09bf8258c9f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number of members: 6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.2\n",
+        "#Adding batgirl and Nightwing as new members\n",
+        "justice_league.extend([\"Batgirl\", \"Nightwing\"])\n",
+        "print(f\"After adding Batgirl & Nightwing: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "JHDjwrq475bk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5d95b416-352a-4436-c06f-1737b8e2e47c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After adding Batgirl & Nightwing: ['Superman', 'Batman', 'Wonder Woman', 'Flash', 'Aquaman', 'Green Lantern', 'Batgirl', 'Nightwing']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.3\n",
+        "# Moving wonderwoman to beginning of the list\n",
+        "justice_league.remove(\"Wonder Woman\")\n",
+        "justice_league.insert(0, \"Wonder Woman\")\n",
+        "print(f\" After moving Wonder Woman to front: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "3cFRJrL38VR-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c6812574-bdd8-4cce-9682-039b9ab78a76"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " After moving Wonder Woman to front: ['Wonder Woman', 'Superman', 'Batman', 'Flash', 'Aquaman', 'Green Lantern', 'Batgirl', 'Nightwing']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.4\n",
+        "justice_league.remove(\"Green Lantern\")\n",
+        "aquaman_index = justice_league.index(\"Aquaman\")\n",
+        "flash_index = justice_league.index(\"Flash\")\n",
+        "insert_position = min(aquaman_index, flash_index) + 1  # right after whichever comes first\n",
+        "justice_league.insert(insert_position, \"Green Lantern\")\n",
+        "print(f\"After placing Green Lantern between Aquaman & Flash: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "GoLcMh1U9ac4",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "06514475-50cd-4c66-87c1-4c79aea953c8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After placing Green Lantern between Aquaman & Flash: ['Wonder Woman', 'Superman', 'Batman', 'Flash', 'Green Lantern', 'Aquaman', 'Batgirl', 'Nightwing']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.5\n",
+        "# Replacing the entire team\n",
+        "justice_league = [\"Cyborg\", \"Shazam\", \"Hawkgirl\", \"Martian Manhunter\", \"Green Arrow\"]\n",
+        "print(f\" New team after replacement: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "xyVydJ3H9ndd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f91b62f6-09ee-4dd5-87f8-fec6ecf464a0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " New team after replacement: ['Cyborg', 'Shazam', 'Hawkgirl', 'Martian Manhunter', 'Green Arrow']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 3.6\n",
+        "# Sorting the list alphabetically\n",
+        "justice_league.sort()\n",
+        "print(f\" Sorted alphabetically: {justice_league}\")"
+      ],
+      "metadata": {
+        "id": "wJ6MnWst97YR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7643518a-572d-4b98-a4f0-ed08340254d9"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Sorted alphabetically: ['Cyborg', 'Green Arrow', 'Hawkgirl', 'Martian Manhunter', 'Shazam']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Section 4(If Condition)"
+      ],
+      "metadata": {
+        "id": "z_L1Yy7s-UEe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4.1 BMI calculation\n",
+        "def bmi_category():\n",
+        "    height = float(input(\"\\nEnter height in meters: \"))\n",
+        "    weight = float(input(\"Enter weight in kilograms: \"))\n",
+        "    bmi = weight / (height ** 2)\n",
+        "\n",
+        "    if bmi >= 30:\n",
+        "        category = \"Obesity\"\n",
+        "    elif 25 <= bmi < 30:\n",
+        "        category = \"Overweight\"\n",
+        "    elif 18.5 <= bmi < 25:\n",
+        "        category = \"Normal\"\n",
+        "    else:\n",
+        "        category = \"Underweight\"\n",
+        "\n",
+        "    print(f\"BMI: {bmi:.2f} -> {category}\")\n",
+        "    return category\n",
+        "bmi_category()"
+      ],
+      "metadata": {
+        "id": "tKkvu4qI-dPr",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 125
+        },
+        "outputId": "ba0d8eb2-85ab-40da-bf06-819ad4c189a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Enter height in meters: 1.82\n",
+            "Enter weight in kilograms: 75\n",
+            "BMI: 22.64 -> Normal\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Normal'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4.2\n",
+        "cities_by_country = {\n",
+        "    \"Australia\": [\"Sydney\", \"Melbourne\", \"Brisbane\", \"Perth\"],\n",
+        "    \"UAE\": [\"Dubai\", \"Abu Dhabi\", \"Sharjah\", \"Ajman\"],\n",
+        "    \"India\": [\"Mumbai\", \"Bangalore\", \"Chennai\", \"Delhi\"],\n",
+        "}\n",
+        "\n",
+        "def find_country(city):\n",
+        "    for country, cities in cities_by_country.items():\n",
+        "        if city in cities:\n",
+        "            return country\n",
+        "    return None\n",
+        "\n",
+        "def city_country_lookup():\n",
+        "    city = input(\"\\nEnter a city name: \")\n",
+        "    country = find_country(city)\n",
+        "    if country:\n",
+        "        print(f\"{city} is in {country}\")\n",
+        "    else:\n",
+        "        print(f\"{city} was not found in the dataset\")\n",
+        "city_country_lookup()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1NTNxXyG_cP0",
+        "outputId": "7333d2cf-5172-4fbc-e223-3fbf4037fba6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Enter a city name: Dubai\n",
+            "Dubai is in UAE\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4.3 (to check if two belongs to a country or not)\n",
+        "import requests\n",
+        "\n",
+        "def get_country(city):\n",
+        "    url = \"https://nominatim.openstreetmap.org/search\"\n",
+        "    params = {\n",
+        "        \"q\": city,\n",
+        "        \"format\": \"json\",\n",
+        "        \"addressdetails\": 1,\n",
+        "        \"limit\": 1\n",
+        "    }\n",
+        "    headers = {\n",
+        "        \"User-Agent\": \"city-country-checker-app\"  # required by Nominatim's usage policy\n",
+        "    }\n",
+        "\n",
+        "    response = requests.get(url, params=params, headers=headers)\n",
+        "    data = response.json()\n",
+        "\n",
+        "    if not data:\n",
+        "        return None, None\n",
+        "\n",
+        "    address = data[0].get(\"address\", {})\n",
+        "    country = address.get(\"country\")\n",
+        "    display_name = data[0].get(\"display_name\")\n",
+        "    return country, display_name\n",
+        "\n",
+        "\n",
+        "def main():\n",
+        "    city1 = input(\"Enter the first city: \").strip()\n",
+        "    city2 = input(\"Enter the second city: \").strip()\n",
+        "\n",
+        "    country1, name1 = get_country(city1)\n",
+        "    country2, name2 = get_country(city2)\n",
+        "\n",
+        "    if country1 is None:\n",
+        "        print(f\"Couldn't find location data for '{city1}'.\")\n",
+        "        return\n",
+        "    if country2 is None:\n",
+        "        print(f\"Couldn't find location data for '{city2}'.\")\n",
+        "        return\n",
+        "\n",
+        "    print(f\"\\n{city1} → {name1}\")\n",
+        "    print(f\"{city2} → {name2}\\n\")\n",
+        "\n",
+        "    if country1.lower() == country2.lower():\n",
+        "        print(f\"✅ Both cities are in the same country: {country1}\")\n",
+        "    else:\n",
+        "        print(f\"❌ Different countries: {country1} vs {country2}\")\n",
+        "\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    main()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yIMRR23bA0lI",
+        "outputId": "aa09f1a9-36a0-49a5-bea1-c33dc71901df"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the first city: Abuja\n",
+            "Enter the second city: Lagos\n",
+            "\n",
+            "Abuja → Abuja, Municipal Area Council, Federal Capital Territory, 223140, Nigeria\n",
+            "Lagos → Lagos, Lagos Island, Lagos, 100242, Nigeria\n",
+            "\n",
+            "✅ Both cities are in the same country: Nigeria\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Section 5(For Loop)"
+      ],
+      "metadata": {
+        "id": "1xbU24wrBY2y"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 5.1 Dice roll simulation\n",
+        "import random\n",
+        "def roll_dice_simulation(num_rolls=20):\n",
+        "    rolls = [random.randint(1, 6) for _ in range(num_rolls)]\n",
+        "\n",
+        "    count_6 = 0\n",
+        "    count_1 = 0\n",
+        "    double_sixes = 0\n",
+        "\n",
+        "    for i in range(len(rolls)):\n",
+        "        if rolls[i] == 6:\n",
+        "            count_6 += 1\n",
+        "        if rolls[i] == 1:\n",
+        "            count_1 += 1\n",
+        "        if rolls[i] == 6 and i > 0 and rolls[i - 1] == 6:\n",
+        "            double_sixes += 1\n",
+        "\n",
+        "    print(f\"\\n5.1) Rolls: {rolls}\")\n",
+        "    print(f\"     Number of 6s: {count_6}\")\n",
+        "    print(f\"     Number of 1s: {count_1}\")\n",
+        "    print(f\"     Two 6s in a row: {double_sixes}\")\n",
+        "\n",
+        "roll_dice_simulation()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KhLRb6JSBetU",
+        "outputId": "7b3c8339-21d0-427a-f138-4bb02bf1d62b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "5.1) Rolls: [5, 6, 1, 1, 5, 1, 4, 4, 3, 3, 6, 1, 3, 5, 3, 1, 4, 3, 5, 3]\n",
+            "     Number of 6s: 2\n",
+            "     Number of 1s: 5\n",
+            "     Two 6s in a row: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 5.2 Jumping jacks workout tracker\n",
+        "def jumping_jacks_workout(total=100, set_size=10):\n",
+        "    completed = 0\n",
+        "    print(f\"\\n5.2) Workout tracker (total goal: {total})\")\n",
+        "\n",
+        "    while completed < total:\n",
+        "        completed += set_size\n",
+        "        print(f\"Completed {set_size} jumping jacks. Total so far: {completed}\")\n",
+        "\n",
+        "        tired = input(\"Are you tired? (yes/no): \").strip().lower()\n",
+        "        if tired in (\"yes\", \"y\"):\n",
+        "            skip = input(\"Do you want to skip the remaining sets? (yes/no): \").strip().lower()\n",
+        "            if skip in (\"yes\", \"y\"):\n",
+        "                print(f\"You completed a total of {completed} jumping jacks.\")\n",
+        "                return\n",
+        "        remaining = total - completed\n",
+        "        if remaining > 0:\n",
+        "            print(f\"{remaining} jumping jacks remaining.\")\n",
+        "\n",
+        "    print(\"Congratulations! You completed the workout.\")\n",
+        "\n",
+        "jumping_jacks_workout()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wMbt_-REBgRg",
+        "outputId": "0b881a71-ee49-4fca-b1af-197b0a862217"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "5.2) Workout tracker (total goal: 100)\n",
+            "Completed 10 jumping jacks. Total so far: 10\n",
+            "Are you tired? (yes/no): No\n",
+            "90 jumping jacks remaining.\n",
+            "Completed 10 jumping jacks. Total so far: 20\n",
+            "Are you tired? (yes/no): No\n",
+            "80 jumping jacks remaining.\n",
+            "Completed 10 jumping jacks. Total so far: 30\n",
+            "Are you tired? (yes/no): Yes\n",
+            "Do you want to skip the remaining sets? (yes/no): Yes\n",
+            "You completed a total of 30 jumping jacks.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
